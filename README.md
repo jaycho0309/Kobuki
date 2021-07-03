@@ -17,7 +17,7 @@ YOLOv3를 사용하여 객체 인식
 ----------------------
 # Driving Algorithm
 
-![그림3](https://user-images.githubusercontent.com/80737266/124346267-da9d4d80-dc18-11eb-819c-29775fddf6bf.png){: width="10" height="10"}
+![그림3](https://user-images.githubusercontent.com/80737266/124346267-da9d4d80-dc18-11eb-819c-29775fddf6bf.png){: width="10%" height="10%"}
 ![그림4](https://user-images.githubusercontent.com/80737266/124346268-dc671100-dc18-11eb-994b-5b8c6510dd4e.png)
 ![그림5](https://user-images.githubusercontent.com/80737266/124346270-dd983e00-dc18-11eb-9a9e-4bc041eeb5f3.png)
 ![그림6](https://user-images.githubusercontent.com/80737266/124346272-df620180-dc18-11eb-8157-76fe38545cde.png)
