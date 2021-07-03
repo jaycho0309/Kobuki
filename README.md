@@ -11,8 +11,8 @@ YOLOv3를 사용하여 객체 인식
 기존 DarkNet53의 빨간색 부분인 Residual Block의 반복횟수를 (1,2,8,8,4) -> (1,2,3,3,2)로 줄임  
 
 
-
-
 ![그림2](https://user-images.githubusercontent.com/80737266/124345996-37980400-dc17-11eb-97a5-0c6641f46b04.png)  
 주행 환경과 로봇 시야에 맞는 영상을 직접 촬영하여 데이터 학습
 
+----------------------
+# Driving Algorithm
