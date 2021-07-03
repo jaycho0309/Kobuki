@@ -1,0 +1,8 @@
+prefix=/home/jay/catkin_ws/install
+
+Name: kobuki_project
+Description: Description of kobuki_project
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lkobuki_project -lopencv
+Requires: cv_bridge image_transport roscpp sensor_msgs std_msgs rospy

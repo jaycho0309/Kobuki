@@ -1,0 +1,2 @@
+kobuki_project
+-DCATKIN_DEVEL_PREFIX=/home/jay/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jay/catkin_ws/install -G Unix Makefiles
