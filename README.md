@@ -43,11 +43,20 @@ Redzone : 정지 명령
 ![캡처4](https://user-images.githubusercontent.com/80737266/124346739-716b0980-dc1b-11eb-8808-9c71c91ad3b2.PNG)
 - YOLO332는 Darknet에 비해 70%의 parameter를 가짐 -> 33% 속도 향상
 - mean AP는 4.6%p 하락, Person에 대한 AP는 3.2%p 하락 (Trade-off)
-- 실험환경은 laptop이고 배터리에 영향을 많이 받아 전원이 50% 이하일 때 fps가 절반으로 하락하는 
+- 실험환경은 laptop이고 배터리에 영향을 많이 받아 전원이 50% 이하일 때 fps가 절반으로 하락하는 현상 확인
+
 ## Experiment 1
+### 실험 환경
 ![캡처2](https://user-images.githubusercontent.com/80737266/124346737-70d27300-dc1b-11eb-9d40-c606f8f168bc.PNG)  
+### 주행
 ![캡처5](https://user-images.githubusercontent.com/80737266/124346740-7203a000-dc1b-11eb-8001-56580dd9765c.PNG)   
+- Kobuki의 위치를 1초마다 기록. 사람은 검정색 박스를 따라 이동하며 로봇의 이동경로는 각 색깔로 표시
+### 결과
 ![캡처6](https://user-images.githubusercontent.com/80737266/124346741-7203a000-dc1b-11eb-9d27-a1d9c2557e3c.PNG)  
+- 5번의 실험 모두 사람을 따라가는데 성공
+- 평군 0.37m/s로 주행, 6%의 비율로 Target 감지 실패
+- fps : 1.8 ~ 3.6
+
 ## Experiment 2
 ![캡처3](https://user-images.githubusercontent.com/80737266/124346738-70d27300-dc1b-11eb-9070-582e34dc6e33.PNG)  
 ![캡처7](https://user-images.githubusercontent.com/80737266/124346742-729c3680-dc1b-11eb-9828-8622aa72218a.PNG)  
