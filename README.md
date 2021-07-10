@@ -58,10 +58,24 @@ Redzone : 정지 명령
 - fps : 1.8 ~ 3.6
 
 ## Experiment 2
+### 실험 환경
 ![캡처3](https://user-images.githubusercontent.com/80737266/124346738-70d27300-dc1b-11eb-9070-582e34dc6e33.PNG)  
+### 주행
 ![캡처7](https://user-images.githubusercontent.com/80737266/124346742-729c3680-dc1b-11eb-9828-8622aa72218a.PNG)  
+- 로봇은 원점에서 출발, Target은 (6,0)에 고정, 검정 박스는 장애물
+- 밝은 청색(Trial 1)과 노란 경로(Trial 4)는 실패 사례
+- Trial 1 : 장애물을 사람으로 잘못 인식  Trial 4 : 장애물을 뒤늦게 인식하여 충돌
+### 결과
 ![캡처8](https://user-images.githubusercontent.com/80737266/124346743-7334cd00-dc1b-11eb-8f84-725a7136bca0.PNG)
+- 성공한 사례에선 평군 11.75m 이동, 평균속도 0.3722m/s
+- Lost track target 비율은 exp1에 비해 높음 -> 장애물 회피를 위해 회전하며 target이 시야에서 벗어나고 흔들리기 때문
 
 # Future Works
 ![캡처10](https://user-images.githubusercontent.com/80737266/124346747-792aae00-dc1b-11eb-87a1-93f7f0a2b12a.PNG)
-
+- Turn 이후 새로운 Person이 화면에 잡히면 Target이 변경되는 문제 
+  - Target의 상의 등 RGB값을 저장하여 해결 시도
+    - Object Box에서 정확한 위치 파악 문제, 빛에 따른 RGB 값 변화 문제
+    - 우연힌 같은 옷을 입은 사람이 있다면 여전히 Target을 잃음
+- 실험 2에서 확인한 객체인식 오류
+  - YOLO332의 고도화
+    - Data 증가, laptop 성능 향상
