@@ -17,7 +17,7 @@ YOLOv3를 사용하여 객체 인식
 ------------------------
 # YOLOv3 
 ![그림1](https://user-images.githubusercontent.com/80737266/124345892-a163de00-dc16-11eb-9cf2-0494b272d706.png)  
-기존 DarkNet53의 빨간색 부분인 Residual Block의 반복횟수를 (1,2,8,8,4) -> (1,2,3,3,2)로 줄임  
+기존 DarkNet53의 빨간색 부분인 Residual Block의 반복횟수를 (1,2,8,8,4) -> (1,2,3,3,2)로 줄임 [YOLO332]  
 
 
 ![그림2](https://user-images.githubusercontent.com/80737266/124345996-37980400-dc17-11eb-97a5-0c6641f46b04.png)  
@@ -33,13 +33,17 @@ Redzone : 정지 명령
 - kobuki의 지름이 약 35cm 이므로 50cm를 충돌 범위로 설정
 - Redzone 앞에서 최저속도 0.2m/s, 0.04m/s로 감속하므로 충돌하지 않고 멈추기 위해 1m를 안전거리로 설정
 - 회전 시 직선방향 0.2m/s, 각속도 0.4rad/s. 최악의 상황인 90도 회전을 위해 4초 필요, Trunzone을 1.5m로 설정
-- 1.5m 까지의 거리는 회전 시 충돌 우려가 있어 Yellowzone으로 설정, 장애물이 있다면 
+- 1.5m 까지의 거리는 회전 시 충돌 우려가 있어 Yellowzone으로 설정, 장애물이 있다면 직진 강제
+
 ## Flow Chart of Kobuki
 ![캡처1](https://user-images.githubusercontent.com/80737266/124346736-7039dc80-dc1b-11eb-8530-8b2a1083cf1a.PNG)
+
 # Experiments
 ## Experiment 0
 ![캡처4](https://user-images.githubusercontent.com/80737266/124346739-716b0980-dc1b-11eb-8808-9c71c91ad3b2.PNG)
-
+- YOLO332는 Darknet에 비해 70%의 parameter를 가짐 -> 33% 속도 향상
+- mean AP는 4.6%p 하락, Person에 대한 AP는 3.2%p 하락 (Trade-off)
+- 실험환경은 laptop이고 배터리에 영향을 많이 받아 전원이 50% 이하일 때 fps가 절반으로 하락하는 
 ## Experiment 1
 ![캡처2](https://user-images.githubusercontent.com/80737266/124346737-70d27300-dc1b-11eb-9d40-c606f8f168bc.PNG)  
 ![캡처5](https://user-images.githubusercontent.com/80737266/124346740-7203a000-dc1b-11eb-8001-56580dd9765c.PNG)   
