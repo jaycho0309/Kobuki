@@ -14,7 +14,7 @@ YOLOv3를 사용하여 객체 인식
 - think.py : 받은 정보를 바탕으로 주행하는 알고리즘
 - sense.py : 현재 로봇의 위치 및 이동 정보 저장
 - act.py : 로봇의 행동 제어
-
+------------------------
 # YOLOv3 
 ![그림1](https://user-images.githubusercontent.com/80737266/124345892-a163de00-dc16-11eb-9cf2-0494b272d706.png)  
 기존 DarkNet53의 빨간색 부분인 Residual Block의 반복횟수를 (1,2,8,8,4) -> (1,2,3,3,2)로 줄임  
@@ -26,7 +26,14 @@ YOLOv3를 사용하여 객체 인식
 ----------------------
 # Driving Algorithm
 ## Schematic of Kobuki Zones  
-![캡처](https://user-images.githubusercontent.com/80737266/124346735-7039dc80-dc1b-11eb-968a-284d0c7ff25c.PNG)
+![캡처](https://user-images.githubusercontent.com/80737266/124346735-7039dc80-dc1b-11eb-968a-284d0c7ff25c.PNG)  
+Turnzone : 장애물을 인식하여 회피 명령  
+Yellowzone : 장애물 충돌 방지  
+Redzone : 정지 명령  
+- kobuki의 지름이 약 35cm 이므로 50cm를 충돌 범위로 설정
+- Redzone 앞에서 최저속도 0.2m/s, 0.04m/s로 감속하므로 충돌하지 않고 멈추기 위해 1m를 안전거리로 설정
+- 회전 시 직선방향 0.2m/s, 각속도 0.4rad/s. 최악의 상황인 90도 회전을 위해 4초 필요, Trunzone을 1.5m로 설정
+- 1.5m 까지의 거리는 회전 시 충돌 우려가 있어 Yellowzone으로 설정, 장애물이 있다면 
 ## Flow Chart of Kobuki
 ![캡처1](https://user-images.githubusercontent.com/80737266/124346736-7039dc80-dc1b-11eb-8530-8b2a1083cf1a.PNG)
 # Experiments
