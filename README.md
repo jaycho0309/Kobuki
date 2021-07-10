@@ -73,10 +73,10 @@ Redzone : 정지 명령
 # Future Works
 ![캡처10](https://user-images.githubusercontent.com/80737266/124346747-792aae00-dc1b-11eb-87a1-93f7f0a2b12a.PNG)
 - Turn 이후 새로운 Person이 화면에 잡히면 Target이 변경되는 문제 
-  - Target의 상의 등 RGB값을 저장하여 해결 시도
+ - Target의 상의 등 RGB값을 저장하여 해결 시도
     - Object Box에서 정확한 위치 파악 문제, 빛에 따른 RGB 값 변화 문제
-    - 우연힌 같은 옷을 입은 사람이 있다면 여전히 Target을 잃음
+    - 우연힌 같은 옷을 입은 사람이 있다면 여전히 Target을 잃음  
   
 - 실험 2에서 확인한 객체인식 오류
-  - YOLO332의 고도화
+ - YOLO332의 고도화
     - Data 증가, laptop 성능 향상
