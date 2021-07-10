@@ -76,6 +76,7 @@ Redzone : 정지 명령
   - Target의 상의 등 RGB값을 저장하여 해결 시도
     - Object Box에서 정확한 위치 파악 문제, 빛에 따른 RGB 값 변화 문제
     - 우연힌 같은 옷을 입은 사람이 있다면 여전히 Target을 잃음
+  
 - 실험 2에서 확인한 객체인식 오류
   - YOLO332의 고도화
     - Data 증가, laptop 성능 향상
