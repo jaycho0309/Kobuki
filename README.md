@@ -6,6 +6,15 @@ YOLOv3를 사용하여 객체 인식
 
 
 ----------------------
+# 프로젝트 구조
+- camera.py : camera 정보를 cv_bridge로 ros에 전달
+- detect.py : YOLO-332로 객체 인식
+- rgb_sub.py : camera 정보 중 rgb 값을 subscribe
+- depth_sub.py : camera 정보 중 depth 값을 subscribe
+- think.py : 받은 정보를 바탕으로 주행하는 알고리즘
+- sense.py : 현재 로봇의 위치 및 이동 정보 저장
+- act.py : 로봇의 행동 제어
+
 # YOLOv3 
 ![그림1](https://user-images.githubusercontent.com/80737266/124345892-a163de00-dc16-11eb-9cf2-0494b272d706.png)  
 기존 DarkNet53의 빨간색 부분인 Residual Block의 반복횟수를 (1,2,8,8,4) -> (1,2,3,3,2)로 줄임  
